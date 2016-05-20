@@ -8,6 +8,7 @@ call vundle#begin()
     Plugin 'scrooloose/nerdtree'
     Plugin 'tpope/vim-surround'
     Plugin 'mattn/emmet-vim'
+    Plugin 'ctrlpvim/ctrlp.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -35,3 +36,6 @@ map <leader>e :NERDTreeToggle<CR>
 "note: usage type Ctrl-y + ,
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+"ctrlp
+nnoremap <leader>p :CtrlP d:\code
