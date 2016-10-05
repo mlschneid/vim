@@ -4,7 +4,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'VundleVim/Vundle.Vim'
+    Plugin 'Valloric/YouCompleteMe'
     Plugin 'junegunn/seoul256.vim'
+    Plugin 'morhetz/gruvbox'
     Plugin 'scrooloose/nerdtree'
     Plugin 'tpope/vim-surround'
     Plugin 'mattn/emmet-vim'
@@ -20,11 +22,14 @@ set number
 set norelativenumber
 set cursorline
 set noswapfile
+set nowrap
+
 set expandtab
 set tabstop=4
 set shiftwidth=4
 
-colorscheme seoul256
+let g:gruvbox_contrast_dark = 'medium'
+colorscheme gruvbox
 set guifont=Consolas:h11.5
 
 let mapleader = ","
@@ -38,4 +43,4 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 "ctrlp
-nnoremap <leader>p :CtrlP d:\code
+nnoremap <leader>p :CtrlP w:\
