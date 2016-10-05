@@ -16,7 +16,7 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-cd $HOME
+cd W:\ 
 
 set number
 set norelativenumber
