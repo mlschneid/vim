@@ -1,46 +1,17 @@
-set nocompatible
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-    Plugin 'VundleVim/Vundle.Vim'
-    Plugin 'Valloric/YouCompleteMe'
-    Plugin 'junegunn/seoul256.vim'
-    Plugin 'morhetz/gruvbox'
-    Plugin 'scrooloose/nerdtree'
-    Plugin 'tpope/vim-surround'
-    Plugin 'mattn/emmet-vim'
-    Plugin 'ctrlpvim/ctrlp.vim'
-call vundle#end()
+let g:python3_host_prog='~/code/envs/neovim3/Scripts/python.exe'
 
-filetype plugin indent on
-syntax on
+cd ~
 
-cd W:\ 
+call plug#begin('~/AppData/Local/nvim/plugged')
 
-set number
-set norelativenumber
-set cursorline
-set noswapfile
-set nowrap
+Plug 'scrooloose/nerdtree'
+Plug 'morhetz/gruvbox'
 
-set expandtab
-set tabstop=4
-set shiftwidth=4
+call plug#end()
 
-let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
-set guifont=Consolas:h11.5
+set background=dark
+let g:gruvbox_contrast_dark = 'medium'
 
-let mapleader = ","
-nnoremap <leader>v :tabe $MYVIMRC<cr>
-map <leader>e :NERDTreeToggle<CR>
-
-"emmet
-"note: default leader is <c-y>
-"note: usage type Ctrl-y + ,
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
-
-"ctrlp
-nnoremap <leader>p :CtrlP w:\
+Guifont! Fira\ Mono:h10
